@@ -4,9 +4,9 @@ import bson
 from bson import json_util
 import json
 
-client = pymongo.MongoClient('localhost', 27017)
+client = pymongo.MongoClient('mongodb://admin:root@ds031877.mongolab.com:31877/heroku_app34284493')
 
-db = client.mhetwitter
+db = client.heroku_app34284493
 
 tweets = db.tweets
 
@@ -28,7 +28,7 @@ while iterator is True:
 	print type(result)
 	result_dict[key] = result
 	iterator = result_data.alive
-	with open('app/js/tweets.json', 'w') as outfile:
+	with open('js/tweets.json', 'w') as outfile:
 		json.dump(result_dict, outfile, default=json_util.default)
 	key += 1	
 else:

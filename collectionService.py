@@ -5,11 +5,11 @@ from dateutil.tz import *
 from datetime import *
 from alchemyapi import AlchemyAPI
 
-client = pymongo.MongoClient('localhost', 27017)
+client = pymongo.MongoClient('mongodb://admin:root@ds031877.mongolab.com:31877/heroku_app34284493')
 
 alchemyapi = AlchemyAPI()
 
-db = client.mhetwitter
+db = client.heroku_app34284493
 
 tweets = db.tweets
 
