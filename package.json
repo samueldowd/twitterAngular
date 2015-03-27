@@ -1,11 +1,15 @@
 {
-  "name": "svsdesigns",
+  "name": "mhe-twitter",
   "version": "0.0.1",
   "dependencies": {
-    "express": "3.3.x"
+    "express": "3.3.x",
+    "bower": "1.3.12"
   },
   "engines": {
     "node": "0.10.x",
     "npm": "1.3.x"
-  }
+  },
+  "scripts": {
+    "postinstall": "bower install"
+  }	
 }
