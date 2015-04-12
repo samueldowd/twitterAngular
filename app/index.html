@@ -24,7 +24,7 @@
       <inputplaceholder="Enter a search term" autofocus>
       <div class="form-group">
         <label for="search">Search</label>
-        <input ng-model="query" type="text" class="form-control" id="search" placeholder="Tweet Text...">
+        <input ng-model="tweet" type="search" class="form-control" id="search" placeholder="Tweet Text...">
       </div>
       </div>
     </form>  	
@@ -45,37 +45,29 @@
       <td>
         Tweet Sentiment
       </td>
-    <tr ng-repeat="tweet in tweets | filter: query">
+    <tr ng-repeat="tweet in tweets | filter:query">
       <td>
 	       <p ng-repeat="hashtags in tweet.object['hashtags']">
          {{  hashtags }}
          </p>
       </td>
       <td>	
-      	<a ng-href="http://twitter.com/{{ tweet.user['screen_name'] }}">
-        	{{ tweet.object['author_alias'] }}
+        <a ng-href="{{ tweet.object.author.author_uri }}">
+          {{ tweet.object.author['author_alias'] }}
         </a>
       </td>
       <td>
-        {{ tweet.object['author_name'] }}
+        {{ tweet.object.author['author_name'] }}
       </td>
       <td>
         {{ tweet.object['text'] }}
+        <p><a  ng-href="{{ tweet.object.tweet_uri }}">Link to Tweet</a></p>
       </td>
-      <td ng-style="{'background-color':'rgba(0,255,0,{{ tweet.object['tweet_sentiment'] }})'}">
-        {{ tweet.object['text'] }}
+      <td ng-style="{'background-color': '{{ tweet.object.sentiment.color }}'}">
+        {{ tweet.object.sentiment.type }}
       </td>   
     <tr>
   </table>
-  <ul class="artistlist">
-    <li class="artist cf" ng-repeat="item in artists">
-      <img ng-src="images/{{item.shortname}}_tn.jpg" alt="Photo of {{item.name}}">
-      <div class="info">
-        <h2>{{item.name}}</h2>
-        <h3>{{item.reknown}}</h3>
-      </div>
-    </li>
-  </ul>
 </div>
 
 </body>

@@ -37,7 +37,11 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+alchemy keys.txt
+api_key.txt
+Documentation.json
 
 # Directories #
 ######################
 Archived/
+data/
