@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 TwitterSearch
 pymongo
 python-dateutil
@@ -10,3 +11,16 @@ oauthlib
 pytz
 json
 sys
+=======
+pymongo==2.8
+requests==2.5.1
+requests-oauthlib==0.4.2
+setuptools==1.1
+TwitterSearch==1.0.0
+DateTime==4.0.1
+zope.interfaces==4.1.2
+oauthlib==0.7.2
+python-dateutil==2.4.1
+simplejson==3.6.5
+git+git://github.com/AlchemyAPI/alchemyapi_python.git
+>>>>>>> a1d825e610f6a221726b6eac9e1c51abc337043e

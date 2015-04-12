@@ -8,16 +8,20 @@ import sys
 
 arg_keyword = str(sys.argv[1])
 
-client = pymongo.MongoClient('localhost', 27017)
+client = pymongo.MongoClient('mongodb://admin:root@ds031877.mongolab.com:31877/heroku_app34284493')
 
 alchemyapi = AlchemyAPI()
 
+<<<<<<< HEAD:tweetSensor.py
 db = client.twitterAnalysis
 
 if arg_keyword[0] is ".":
     arg_keyword = arg_keyword.replace('.', '#')
 
 tweets = db[arg_keyword]
+=======
+db = client.heroku_app34284493
+>>>>>>> a1d825e610f6a221726b6eac9e1c51abc337043e:collectionService.py
 
 db_count = tweets.count()
 

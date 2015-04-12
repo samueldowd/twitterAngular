@@ -1,0 +1,25 @@
+{
+  "name": "mhe-twitter",
+  "version": "0.0.1",
+  "homepage": "https://github.com/samueldowd/twitterAngular",
+  "authors": [
+    "Sam Dowd <sam@samueldowd.com>"
+  ],
+  "description": "An Angular app that analyzes tweets based on sentiment.",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": ">= 1.9.0",
+    "bootstrap": ">= 3.1.1",
+    "angular": ">= 1.3.15"
+  }
+}

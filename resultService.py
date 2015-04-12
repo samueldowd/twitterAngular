@@ -11,9 +11,13 @@ arg_keyword = sys.argv[2]
 if arg_keyword[0] is ".":
     arg_keyword = arg_keyword.replace('.', '#')
 
-client = pymongo.MongoClient('localhost', 27017)
+client = pymongo.MongoClient('mongodb://admin:root@ds031877.mongolab.com:31877/heroku_app34284493')
 
+<<<<<<< HEAD
 db = client.twitterAnalysis
+=======
+db = client.heroku_app34284493
+>>>>>>> a1d825e610f6a221726b6eac9e1c51abc337043e
 
 tweets = db[arg_keyword]
 
@@ -35,6 +39,11 @@ while iterator is True:
 	print type(result)
 	result_dict[key] = result
 	iterator = result_data.alive
+<<<<<<< HEAD
+=======
+	with open('js/tweets.json', 'w') as outfile:
+		json.dump(result_dict, outfile, default=json_util.default)
+>>>>>>> a1d825e610f6a221726b6eac9e1c51abc337043e
 	key += 1	
 else:
 	print 'done'
